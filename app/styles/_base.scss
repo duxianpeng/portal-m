@@ -1,0 +1,346 @@
+/** Public Portion */
+
+
+/** 清除内外边距 **/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td
+/* table elements 表格元素 */
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    color: $body-color;
+    background: $body-background;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='number'] {
+    padding-left: 10px;
+    border: 2px #ba7 solid;
+    outline: none;
+    background: rgb(243, 241, 235);
+}
+
+input[type='text']:active,
+input[type='search']:active,
+input[type='number']:active,
+input[type='text']:focus,
+input[type='search']:focus,
+input[type='number']:focus {
+    border: 2px #ba0 solid;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    color: #fcc;
+    border: 1px #fcc solid;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #fdd;
+    border: 1px #fdd solid;
+    background: #911;
+}
+
+button.primary {
+    color: #eee;
+    background: #c22;
+}
+
+button.secondary {
+    color: #eee;
+    border: 0;
+    background: #ba7;
+}
+
+button.secondary:hover {
+    color: #eee;
+    background: #ba0;
+}
+
+body a:link,
+body a:visited {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: $accent-color;
+}
+
+body a:hover,
+body a:active {
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: $accent-color;
+}
+
+.panel-custom {
+    margin: 2rem 0rem;
+    .panel-heading {
+        padding: 0.5rem 0rem;
+        margin: 1.5rem 0rem;
+        border-left: .4rem $accent-color solid;
+        span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-left: 2rem;
+        }
+    }
+    .panel-body {
+    	padding: 0rem 2rem;
+        .filter {
+            display: flex;
+            justify-content: center;
+            a {
+                padding: 1.5rem 4rem;
+                margin-right: 3rem;
+                border-radius: 0.5rem;
+                color: $white;
+                font-size: 1.2rem;
+            }
+            a.bg-blue {
+                background-color: $bg-blue;
+            }
+            a.bg-yellow {
+                background-color: $bg-yellow;
+            }
+            a.bg-green {
+                background-color: $bg-green;
+            }
+            a.bg-red {
+                background-color: $bg-red;
+            }
+        }
+        .book {
+            display: flex;
+            margin: 2rem 0rem;
+        }
+        .book:first-child {
+            margin-top: 0rem;
+        }
+        .book:last-child {
+            margin-bottom: 0rem;
+            .hr {
+                display: none;
+            }
+        }
+        .without-thumb {
+            .hr {
+                display: none;
+            }
+            h5 {
+            	position: relative;
+            	top: -0.5rem;
+            }
+            padding: 1rem 0rem;
+        }
+        .thumb {
+            margin-right: 2rem;
+        }
+        .thumb,
+        .thumb img {
+            width: 9rem;
+            height: 11.5rem;
+        }
+        .caption {
+            position: relative;
+            width: 100%;
+            .hr {
+                position: absolute;
+                bottom: -1rem;
+                width: 100%;
+                height: 0;
+                border-bottom: .1rem $gray-color0 solid;
+            }
+        }
+        .book-title {
+            position: relative;
+            h5 {
+                display: inline;
+            }
+            span {
+            	position: relative;
+            	top: -0.3rem;
+            	left: 0.5rem;
+            }
+        }
+        p.book-desc {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            padding: 1rem 0rem;
+            color: $gray-color2;
+        }
+        .book-other {
+            font-size: 1.2rem;
+            position: absolute;
+            bottom: 0rem;
+            width: 100%;
+            padding-right: 1rem;
+            color: $gray-color3;
+        }
+        .book-title,
+        .book-other {
+            span.book-author {
+                padding-right: .5rem;
+            }
+            span.book-hots {
+                padding-left: .5rem;
+                em {
+                    color: $accent-color;
+                }
+            }
+            span.book-category {
+            	position: relative;
+            	top: -0.5rem;
+                font-size: 1rem;
+                padding: 0.2rem;
+                color: $second-color;
+                border: .1rem $second-color solid;
+            }
+        }
+        .book-title {
+            span.book-category {
+                font-size: 1.5rem;
+                padding: 0.3rem;
+                margin-right: 3rem;
+            }
+            .book-author,
+            .book-hots {
+                position: relative;
+                top: -0.5rem;
+                margin-right: 3rem;
+            }
+        }
+    }
+    .panel-footer {
+        border: 0;
+        background-color: #fff!important;
+    }
+}
+
+.panel-vertical {
+    .panel-body {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .book {
+        float: left;
+        flex-direction: column;
+        margin: 0rem!important;
+        .thumb {
+            margin: 0rem!important;
+        }
+    }
+}
+
+
+/* Private Portion*/
+
+.header .titlebar {
+    color: $header-titlebar-color;
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        padding: 1.5rem 0rem 1.5rem 1.5rem;
+    }
+    .title-nav {
+        font-size: 1.5rem;
+        padding: 2rem 1.5rem 1.5rem 0rem;
+        color: $gray-color1;
+        a {
+            font-size: 1.5rem;
+            padding: 2rem;
+            color: $header-titlebar-color;
+        }
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+.header .menubar {
+    background: $header-menubar-background;
+    .menu {
+        position: relative;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        list-style-type: none;
+    }
+    .menu li {
+        font-size: 1.5rem;
+        display: inline-block;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        color: $header-menubar-color;
+        border-right: 1px $accent-font-light-color solid;
+    }
+    .menu li.active {
+        .arrow-up {
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translateX(-0.5rem);
+            border-right: 0.8rem solid transparent;
+            border-bottom: 0.8rem solid rgb(250, 250, 248);
+            border-left: 0.8rem solid transparent;
+        }
+    }
+}
+
+.full .book:first-child {
+    margin-bottom: 5rem;
+    .hr {
+        display: none;
+    }
+}
